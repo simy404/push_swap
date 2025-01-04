@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:11:30 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 14:50:21 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/04 16:30:23 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,13 @@ int dev_test()
 	t_stack *src = NULL;
 	stack = &node1;
 	node1.next = &node2;
-	// node2.next = &node3;
-	rotate(&stack);
-	rotate(&stack);
+	node2.next = &node3;
+	// rotat(&stack);
+	reverse_rotate_a(&stack);
+		reverse_rotate_a(&stack);
+		reverse_rotate_a(&stack);
+
+
 	print_stack(stack);
 	printf("-----\n");
 

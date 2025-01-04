@@ -6,13 +6,13 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 12:23:40 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 14:31:12 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/04 16:34:22 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-int push(t_stack **src, t_stack **dst)
+int	push(t_stack **src, t_stack **dst)
 {
 	t_stack	*swp;
 
