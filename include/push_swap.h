@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:05:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 12:31:05 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/04 14:19:23 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,9 @@ typedef struct s_stack
 	int	value;
 	t_flag flag;
 }	t_stack;
+
+int	swap_a(t_stack **a);
+int	swap_b(t_stack **b);
+int	push(t_stack** dst, t_stack** src);
 
 #endif

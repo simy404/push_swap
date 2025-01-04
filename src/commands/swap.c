@@ -6,16 +6,49 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 12:23:47 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 12:30:13 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/04 14:17:49 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "../../include/push_swap.h"
 
-//TODO : this file will include sa, sb, ss functions
+void printf_command(char *command)
+{
+	printf("%s\n", command); //TODO : this function will be deleted after the project is done
+}
 
-void swap_a(t_stack **a);
+int	swap(t_stack **s)
+{
+	t_stack	*swp;
 
-void swap_b(t_stack **b);
+	if (!(*s) || !(*s)->next)
+		return (0);
+	swp = (*s)->next;
+	(*s)->next = swp->next;
+	swp->next = *s;
+	*s = swp;
+	return (1);
+}
+int	swap_a(t_stack **a)
+{
+	if (!swap(a))
+		return (0);
+	printf_command("sa");
+	return (1);
+}
 
-void swap_both(t_stack **a, t_stack **b);
+int	swap_b(t_stack **b)
+{
+	if (!swap(b))
+		return (0);
+	printf_command("sb");
+	return (1);
+}
+
+int swap_both(t_stack **a, t_stack **b)
+{
+	if (!swap(a) || !swap(b))
+		return (0);
+	printf_command("ss");
+	return (1);
+}
