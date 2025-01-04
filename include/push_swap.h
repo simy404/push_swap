@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsamir <hsamir@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:05:36 by hsamir            #+#    #+#             */
-/*   Updated: 2024/12/30 17:05:36 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/04 12:31:05 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,13 @@
 typedef enum e_flag
 {
     UNSORTED,
-    SORTED,
-	BELONGS_TO_A,
-	BELONGS_TO_B
+    SORTED_DESC,
+	SORTED_ASC
 }   t_flag;
 
 typedef struct s_stack
 {
 	struct s_stack	*next;
-	struct s_stack	*prev;
 	int	value;
 	t_flag flag;
 }	t_stack;
