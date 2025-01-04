@@ -1,49 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   input_validation_utils.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/04 12:23:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 17:13:13 by hsamir           ###   ########.fr       */
+/*   Created: 2025/01/04 17:28:48 by hsamir            #+#    #+#             */
+/*   Updated: 2025/01/04 22:46:05 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
-#include <stddef.h>
+#include "../../libft/libft.h"
 
-int	reverse_rotate(t_stack **s)
+int is_valid_number(char* str)
 {
-	t_stack	*last;
-	t_stack	*before_last;
+	int i;
 
-	if (!*s || !(*s)->next)
-		return (0);
-	last = *s;
-	while (last->next)
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i])
 	{
-		before_last = last;
-		last = last->next;
+		if (!ft_isdigit(str[i]))
+			return (0);
+		i++;
 	}
-	last->next = *s;
-	before_last->next = NULL;
-	*s = last;
 	return (1);
 }
 
-int	reverse_rotate_a(t_stack **a)
+int is_duplicate(t_stack *stack, int value)
 {
-	if (!reverse_rotate(a))
-		return (0);
-	print_command("rra");
-	return (1);
-}
-
-int	reverse_rotate_b(t_stack **b)
-{
-	if (!reverse_rotate(b))
-		return (0);
-	print_command("rrb");
+	while (stack)
+	{
+		if (stack->value == value)
+			return (0);
+		stack = stack->next;
+	}
 	return (1);
 }

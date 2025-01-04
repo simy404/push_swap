@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 12:23:40 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 16:34:22 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/04 17:13:08 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	push_a(t_stack **a, t_stack **b)
 {
 	if (!push(b, a))
 		return (0);
-	printf_command("pa");
+	print_command("pa");
 	return (1);
 }
 
@@ -37,6 +37,6 @@ int	push_b(t_stack **a, t_stack **b)
 {
 	if (!push(a, b))
 		return (0);
-	printf_command("pb");
+	print_command("pb");
 	return (1);
 }

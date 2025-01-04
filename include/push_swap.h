@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:05:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 16:32:51 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/04 22:48:05 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ int	rotate_b(t_stack **b);
 int	reverse_rotate_a(t_stack **a);
 int	reverse_rotate_b(t_stack **b);
 
-void	printf_command(char *command);
+void	print_command(char *command);
+int 	is_valid_number(char* str);
+int 	is_duplicate(t_stack *stack, int value);
+int		parse_single_arguments(char* str, t_stack **stack);
+int		parse_multiple_arguments(int argc, char **argv, t_stack **stack);
+int		 push_to_stack(t_stack **stack, int value);
 
 #endif

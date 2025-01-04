@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 12:23:47 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 16:36:50 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/04 17:13:25 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	swap_a(t_stack **a)
 {
 	if (!swap(a))
 		return (0);
-	printf_command("sa");
+	print_command("sa");
 	return (1);
 }
 
@@ -37,7 +37,7 @@ int	swap_b(t_stack **b)
 {
 	if (!swap(b))
 		return (0);
-	printf_command("sb");
+	print_command("sb");
 	return (1);
 }
 
@@ -45,6 +45,6 @@ int	swap_both(t_stack **a, t_stack **b)
 {
 	if (!swap(a) || !swap(b))
 		return (0);
-	printf_command("ss");
+	print_command("ss");
 	return (1);
 }
