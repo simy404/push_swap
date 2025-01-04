@@ -6,16 +6,11 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 12:23:47 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 14:17:49 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/04 14:57:31 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
-
-void printf_command(char *command)
-{
-	printf("%s\n", command); //TODO : this function will be deleted after the project is done
-}
 
 int	swap(t_stack **s)
 {

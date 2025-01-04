@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   printf_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/04 12:23:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 15:02:48 by hsamir           ###   ########.fr       */
+/*   Created: 2025/01/04 14:57:14 by hsamir            #+#    #+#             */
+/*   Updated: 2025/01/04 14:58:31 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include <stdio.h>
 
-//TODO : this file will include rra, rrb, rrr functions
-int reverse_rotate(t_stack **s)
+void	printf_command(char *command)
 {
-	return (1);
+	printf("%s\n", command); //TODO : this function will be updated after the project is done
 }
