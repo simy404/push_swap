@@ -19,7 +19,8 @@ src/commands/reverse_rotate.c \
 src/utils/print_utils.c \
 src/utils/argument_utils.c \
 src/utils/input_validation_utils.c \
-src/utils/stack_utils.c
+src/utils/stack_utils.c \
+src/utils/conversions_utils.c
 
 CC = clang
 CFLAGS = -Wall -Wextra -Werror -g

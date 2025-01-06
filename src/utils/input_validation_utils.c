@@ -14,13 +14,15 @@
 #include "../../libft/libft.h"
 #include <limits.h>
 
-int is_valid_number(char* str)
+int	is_valid_number(char* str)
 {
 	int i;
 
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
+	if(!str[i])
+		return (0);
 	while (str[i])
 	{
 		if (!ft_isdigit(str[i]))
@@ -30,7 +32,7 @@ int is_valid_number(char* str)
 	return (1);
 }
 
-int is_duplicate(t_stack *stack, int value)
+int	is_duplicate(t_stack *stack, int value)
 {
 	while (stack)
 	{
@@ -41,7 +43,7 @@ int is_duplicate(t_stack *stack, int value)
 	return (1);
 }
 
-int is_within_int_range(char* str)
+int	is_within_int_range(char* str)
 {
 	long number;
 

@@ -13,7 +13,7 @@
 #include "../../include/push_swap.h"
 #include <stdlib.h>
 
-int push_to_stack(t_stack **stack, int value)
+int	push_to_stack(t_stack **stack, int value)
 {
 	t_stack *new;
 	t_stack *last;
