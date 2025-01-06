@@ -20,10 +20,7 @@ void free_split(char **split)
 
 	i = 0;
 	while (split[i])
-	{
-		free(split[i]);
-		i++;
-	}
+		free(split[i++]);
 	free(split);
 }
 
@@ -31,7 +28,7 @@ int process_and_push(char* str, t_stack **stack)
 {
 	if (!is_valid_number(str) || !is_duplicate(*stack, ft_atoi(str)))
 	{
-		ft_putendl_fd("Error", 2); //check stderror
+		ft_putendl_fd("Error", 2);
 		return (0);
 	}
 	push_to_stack(stack, ft_atoi(str));
@@ -44,6 +41,11 @@ int	parse_single_arguments(char* str, t_stack **stack)
 
 	i = 0;
 	numbers = ft_split(str, ' ');
+	if (!numbers)
+	{
+		ft_putendl_fd("Error", 2);
+		return (0);
+	}
 	while (numbers[i])
 	{
 		if (!process_and_push(numbers[i], stack))
@@ -59,7 +61,7 @@ int	parse_multiple_arguments(int argc, char **argv, t_stack **stack)
 	int	i;
 
 	i = 1;
-	while (i < argc)
+	while (argc > i)
 	{
 		if (!process_and_push(argv[i], stack))
 			return (0);

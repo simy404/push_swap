@@ -12,6 +12,7 @@
 
 #include "../../include/push_swap.h"
 #include "../../libft/libft.h"
+#include <limits.h>
 
 int is_valid_number(char* str)
 {
@@ -38,4 +39,12 @@ int is_duplicate(t_stack *stack, int value)
 		stack = stack->next;
 	}
 	return (1);
+}
+
+int is_within_int_range(char* str)
+{
+	long number;
+
+	number = ft_atol(str);
+	return (number >= INT_MIN && number <= INT_MAX);
 }
