@@ -34,7 +34,7 @@ int	determine_sign(const char *c, int *i)
 	return (sign);
 }
 
-int	ft_atol(const char *str)
+long	ft_atol(const char *str)
 {
 	long	total;
 	int		sign;

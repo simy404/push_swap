@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
+
 void	print_command(char *command)
 {
 	ft_putendl_fd(command, 1);

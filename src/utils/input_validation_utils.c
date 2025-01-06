@@ -37,10 +37,10 @@ int	is_duplicate(t_stack *stack, int value)
 	while (stack)
 	{
 		if (stack->value == value)
-			return (0);
+			return (1);
 		stack = stack->next;
 	}
-	return (1);
+	return (0);
 }
 
 int	is_within_int_range(char* str)
