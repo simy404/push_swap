@@ -26,7 +26,7 @@ void free_split(char **split)
 
 int process_and_push(char* str, t_stack **stack)
 {
-	if (!is_valid_number(str) || !||!is_duplicate(*stack, ft_atoi(str)))
+	if (!is_valid_number(str) || !is_within_int_range(str) || !is_duplicate(*stack, ft_atoi(str)))
 	{
 		ft_putendl_fd("Error", 2);
 		return (0);
@@ -34,6 +34,7 @@ int process_and_push(char* str, t_stack **stack)
 	push_to_stack(stack, ft_atoi(str));
 	return (1);
 }
+
 int	parse_single_arguments(char* str, t_stack **stack)
 {
 	char **numbers;
