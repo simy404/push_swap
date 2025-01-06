@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static	int	skip_whitespace(const char *c)
+int	skip_whitespace(const char *c)
 {
 	int	i;
 
@@ -20,7 +20,7 @@ static	int	skip_whitespace(const char *c)
 	return (i);
 }
 
-static int	determine_sign(const char *c, int *i)
+int	determine_sign(const char *c, int *i)
 {
 	int	sign;
 

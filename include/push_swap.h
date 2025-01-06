@@ -37,10 +37,13 @@ int	reverse_rotate_a(t_stack **a);
 int	reverse_rotate_b(t_stack **b);
 
 void	print_command(char *command);
-int 	is_valid_number(char* str);
-int 	is_duplicate(t_stack *stack, int value);
+int		ft_atol(const char *str);
+int		push_to_stack(t_stack **stack, int value);
+
+int		is_within_int_range(char* str);
+int		is_valid_number(char* str);
+int		is_duplicate(t_stack *stack, int value);
 int		parse_single_arguments(char* str, t_stack **stack);
 int		parse_multiple_arguments(int argc, char **argv, t_stack **stack);
-int		 push_to_stack(t_stack **stack, int value);
 
 #endif

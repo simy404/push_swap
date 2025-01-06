@@ -26,7 +26,7 @@ void free_split(char **split)
 
 int process_and_push(char* str, t_stack **stack)
 {
-	if (!is_valid_number(str) || !is_duplicate(*stack, ft_atoi(str)))
+	if (!is_valid_number(str) || !||!is_duplicate(*stack, ft_atoi(str)))
 	{
 		ft_putendl_fd("Error", 2);
 		return (0);
