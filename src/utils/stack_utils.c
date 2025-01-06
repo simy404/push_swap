@@ -19,6 +19,7 @@ int	push_to_stack(t_stack **stack, int value)
 	t_stack *last;
 
 	new = (t_stack *)malloc(sizeof(t_stack));
+	print_command("push_to_stack\n");
 	if (!new)
 		return (0);
 	new->value = value;
@@ -34,4 +35,17 @@ int	push_to_stack(t_stack **stack, int value)
 		last = last->next;
 	last->next = new;
 	return (1);
+}
+
+void clear_stack(t_stack **stack)
+{
+	t_stack *tmp;
+
+	while (*stack)
+	{
+		tmp = (*stack)->next;
+		free(*stack);
+		*stack = tmp;
+	}
+	*stack = 0;
 }

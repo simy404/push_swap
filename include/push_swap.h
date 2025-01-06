@@ -37,6 +37,7 @@ int	reverse_rotate_a(t_stack **a);
 int	reverse_rotate_b(t_stack **b);
 
 void	print_command(char *command);
+void	clear_stack(t_stack **stack);
 long	ft_atol(const char *str);
 int		push_to_stack(t_stack **stack, int value);
 
