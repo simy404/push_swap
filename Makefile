@@ -20,7 +20,10 @@ src/utils/print_utils.c \
 src/utils/argument_utils.c \
 src/utils/input_validation_utils.c \
 src/utils/stack_utils.c \
-src/utils/conversions_utils.c
+src/utils/conversions_utils.c \
+src/sorting/sort_three.c \
+src/sorting/quick_sort.c \
+src/sorting/sort_controller.c \
 
 CC = clang
 CFLAGS = -Wall -Wextra -Werror -g

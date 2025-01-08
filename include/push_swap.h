@@ -40,11 +40,20 @@ void	print_command(char *command);
 void	clear_stack(t_stack **stack);
 long	ft_atol(const char *str);
 int		push_to_stack(t_stack **stack, int value);
+int		is_stack_sorted(t_stack *stack, t_flag flag);
+int		stack_size(t_stack *stack);
 
 int		is_within_int_range(char* str);
 int		is_valid_number(char* str);
+
 int		is_duplicate(t_stack *stack, int value);
 int		parse_single_arguments(char* str, t_stack **stack);
 int		parse_multiple_arguments(int argc, char **argv, t_stack **stack);
+
+void		sort_top_three_asc(t_stack **s);
+void		sort_three_asc(t_stack **s);
+void 		sort_top_three_desc(t_stack **s);
+void		sort_stack(t_stack **stack);
+void		quick_sort(t_stack **stack);
 
 #endif

@@ -19,7 +19,6 @@ int	push_to_stack(t_stack **stack, int value)
 	t_stack *last;
 
 	new = (t_stack *)malloc(sizeof(t_stack));
-	print_command("push_to_stack\n");
 	if (!new)
 		return (0);
 	new->value = value;
@@ -48,4 +47,32 @@ void clear_stack(t_stack **stack)
 		*stack = tmp;
 	}
 	*stack = 0;
+}
+
+int is_stack_sorted(t_stack *stack, t_flag flag)
+{
+	if (!stack)
+		return (0);
+	while (stack->next)
+	{
+		if (flag == SORTED_ASC && stack->value > stack->next->value)
+			return (0);
+		if (flag == SORTED_DESC && stack->value < stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}
+
+int	stack_size(t_stack *stack)
+{
+	int size;
+
+	size = 0;
+	while (stack)
+	{
+		size++;
+		stack = stack->next;
+	}
+	return (size);
 }
