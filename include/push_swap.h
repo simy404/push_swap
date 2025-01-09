@@ -53,7 +53,11 @@ int		parse_multiple_arguments(int argc, char **argv, t_stack **stack);
 void		sort_top_three_asc(t_stack **s);
 void		sort_three_asc(t_stack **s);
 void 		sort_top_three_desc(t_stack **s);
-void		sort_stack(t_stack **stack);
 void		quick_sort(t_stack **stack);
+int			quick_sort_a(t_stack **stack_a, t_stack **stack_b, int size);
+int			quick_sort_b(t_stack **stack_a, t_stack **stack_b, int size);
+void		sort_stack(t_stack **stack_a, t_stack **stack_b);
+
+
 
 #endif

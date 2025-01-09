@@ -49,3 +49,14 @@ void	sort_top_three_desc(t_stack **s)
 	if ((*s)->value < (*s)->next->value && (*s)->value > (*s)->next->next->value)
 		swap_a(s);
 }
+
+int is_sorted_order(t_stack **s, int a, int b, int c) {
+	int da;
+	int db;
+	int dc;
+
+	da = (*s)->value;
+	db = (*s)->next->value;
+	dc = (*s)->next->next->value;
+    return !(da > db ^ a > b) && !(dc > db ^ c > b) && !(da > dc ^ a > c);
+}

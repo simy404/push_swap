@@ -28,18 +28,23 @@ int print_stack(t_stack *stack)
 int main(int argc, char** argv)
 {
 	t_stack *stack_a;
-	// t_stack *stack_b;
+	t_stack *stack_b;
+	int error;
 
 	stack_a = NULL;
-	// stack_b = NULL;
+	stack_b = NULL;
 	if (argc < 2)
 		return (0);
 	if(argc == 2)
-		parse_single_arguments(argv[1], &stack_a);
+		error = parse_single_arguments(argv[1], &stack_a);
 	else
-		parse_multiple_arguments(argc, argv, &stack_a);
-	print_stack(stack_a);
-	sort_stack(&stack_a);
+		error = parse_multiple_arguments(argc, argv, &stack_a);
+	if (!error)
+	{
+		clear_stack(&stack_a);
+		return (0);
+	}
+	sort_stack(&stack_a, &stack_b);
 	print_stack(stack_a);
 	clear_stack(&stack_a);
 	return (1);

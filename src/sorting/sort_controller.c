@@ -12,20 +12,20 @@
 
 #include "../../include/push_swap.h"
 
-void sort_stack(t_stack **stack)
+void sort_stack(t_stack **stack_a, t_stack **stack_b)
 {
 	int size;
 
-	if(is_stack_sorted(*stack, SORTED_ASC))
+	if(is_stack_sorted(*stack_a, SORTED_ASC))
 		return ;
-	size = stack_size(*stack);
+	size = stack_size(*stack_a);
 	if(size == 2)
 	{
-		if((*stack)->value > (*stack)->next->value)
-			swap_a(stack);
+		if((*stack_a)->value > (*stack_a)->next->value)
+			swap_a(stack_a);
 	}
 	else if(size == 3)
-		sort_three_asc(stack);
+		sort_three_asc(stack_a);
 	else
-		quick_sort(stack);
+		quick_sort_a(stack_a, stack_b, size);
 }
