@@ -14,6 +14,8 @@
 
 void	sort_top_three_asc(t_stack **s)
 {
+	if ((*s)->value < (*s)->next->value && (*s)->next->value < (*s)->next->next->value) // 1 2 0
+		return ;
 	if ((*s)->value > (*s)->next->value && (*s)->value > (*s)->next->next->value)
 		swap_a(s);
 	if ((*s)->next->value > (*s)->value && (*s)->next->value > (*s)->next->next->value)
@@ -28,23 +30,29 @@ void	sort_top_three_asc(t_stack **s)
 
 void	sort_three_asc(t_stack **s)
 {
+	if ((*s)->value < (*s)->next->value && (*s)->next->value < (*s)->next->next->value)
+		return ;
 	if ((*s)->value > (*s)->next->value && (*s)->value > (*s)->next->next->value)
 		rotate_a(s);
 	if ((*s)->next->value > (*s)->value && (*s)->next->value > (*s)->next->next->value)
 		reverse_rotate_a(s);
 	if ((*s)->value > (*s)->next->value && (*s)->value  < (*s)->next->next->value)
 		swap_a(s);
+	// print_command("test3\n");
+
 }
 
 void	sort_top_three_desc(t_stack **s)
 {
+	if ((*s)->value > (*s)->next->value && (*s)->next->value > (*s)->next->next->value)
+		return ;
 	if ((*s)->value < (*s)->next->value && (*s)->value < (*s)->next->next->value)
-		swap_a(s);
+		swap_b(s);
 	if ((*s)->next->value < (*s)->value && (*s)->next->value < (*s)->next->next->value)
 	{
-		rotate_a(s);
-		swap_a(s);
-		reverse_rotate_a(s);
+		rotate_b(s);
+		swap_b(s);
+		reverse_rotate_b(s);
 	}
 	if ((*s)->value < (*s)->next->value && (*s)->value > (*s)->next->next->value)
 		swap_a(s);
