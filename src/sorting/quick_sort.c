@@ -12,6 +12,7 @@
 
 #include "../../include/push_swap.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 int sort_array(int *arr, int size)
 {
@@ -48,11 +49,12 @@ int get_median(t_stack **stack, int size)
 		return (0);
 	c = size;
 	tmp = *stack;
-	while(tmp)
+	while(size)
 	{
 		arr[--size] = tmp->value;
 		tmp = tmp->next;
 	}
+	// printf("arr : %d %d %d %d\n", arr[0], arr[1], arr[2], arr[3]);
 	sort_array(arr, c);
 	return (arr[c / 2]);
 }
@@ -81,13 +83,10 @@ int quick_sort_b(t_stack **stack_a, t_stack **stack_b, int size)
 	}
 	while (size--)
 		push_a(stack_a, stack_b);
-	if (stack_size(*stack_b) <= 3)
-		return (1);
 
 	quick_sort_a(stack_a, stack_b, count);
 	return (1);
 }
-
 int quick_sort_a(t_stack **stack_a, t_stack **stack_b, int size)
 {
 	int pivot;
@@ -98,20 +97,26 @@ int quick_sort_a(t_stack **stack_a, t_stack **stack_b, int size)
 	rc= 0;
 	count = size;
 	size_a = stack_size(*stack_a);
-	if (size_a == 3)
+	if (size == 3)
 	{
-		sort_top_three_asc(stack_a);
+		if (size_a == 3)
+			sort_three_asc(stack_a);
+		else
+			sort_top_three_asc(stack_a);
 		return (1);
 	}
-	else if (size_a == 2)
+	else if (size == 2)
 	{
 		if ((*stack_a)->value > (*stack_a)->next->value)
 			swap_a(stack_a);
 		return (1);
 	}
-	else if (size_a == 1)
+	else if (size == 1)
 		return (1);
-	pivot = get_median(stack_a, size);;
+	// if (size == 4)
+	// 	printf("size : %d\n", size);
+	pivot = get_median(stack_a, size);
+
 	while (count--)
 	{
 		if ((*stack_a)->value < pivot)
