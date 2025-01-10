@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:05:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 22:48:05 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 00:08:14 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ int		push_to_stack(t_stack **stack, int value);
 int		is_stack_sorted(t_stack *stack, t_flag flag);
 int		stack_size(t_stack *stack);
 
-int		is_within_int_range(char* str);
+int		is_within_int_range(long number);
 int		is_valid_number(char* str);
 
-int		is_duplicate(t_stack *stack, int value);
+int		stack_contains(t_stack *stack, int value);
 int		parse_single_arguments(char* str, t_stack **stack);
 int		parse_multiple_arguments(int argc, char **argv, t_stack **stack);
 

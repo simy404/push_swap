@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:11:30 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 22:04:52 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 01:26:27 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main(int argc, char** argv)
 		clear_stack(&stack_a);
 		return (0);
 	}
-	printf("%d\n", stack_size(stack_a));
+	// printf("%d\n", stack_size(stack_a));
 	sort_stack(&stack_a, &stack_b);
 	// print_stack(stack_a);
 	clear_stack(&stack_a);

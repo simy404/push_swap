@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:28:48 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 22:46:05 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 00:11:40 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../../libft/libft.h"
 #include <limits.h>
 
-int	is_valid_number(char* str)
+int	is_valid_number(char* str) //TODO check str length and then check if the number is valid
 {
 	int i;
 
@@ -32,7 +32,7 @@ int	is_valid_number(char* str)
 	return (1);
 }
 
-int	is_duplicate(t_stack *stack, int value)
+int	stack_contains(t_stack *stack, int value)
 {
 	while (stack)
 	{
@@ -43,10 +43,7 @@ int	is_duplicate(t_stack *stack, int value)
 	return (0);
 }
 
-int	is_within_int_range(char* str)
+int	is_within_int_range(long number)
 {
-	long number;
-
-	number = ft_atol(str);
 	return (number >= INT_MIN && number <= INT_MAX);
 }

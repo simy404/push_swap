@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 21:25:59 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 22:49:04 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 01:25:55 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,20 @@ void free_split(char **split)
 
 int push_if_valid(char* str, t_stack **stack)
 {
-	if (!is_valid_number(str) || !is_within_int_range(str) || is_duplicate(*stack, ft_atoi(str)))
+	long number;
+
+	if (!is_valid_number(str))
 	{
 		ft_putendl_fd("Error", 2);
 		return (0);
 	}
-	return (push_to_stack(stack, ft_atoi(str)));
+	number = ft_atol(str);
+	if (!is_within_int_range(number) || stack_contains(*stack, number))
+	{
+		ft_putendl_fd("Error", 2);
+		return (0);
+	}
+	return (push_to_stack(stack, number));
 }
 
 int	parse_single_arguments(char* str, t_stack **stack)
