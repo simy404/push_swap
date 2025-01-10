@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 22:18:22 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/08 22:18:22 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/10 15:00:04 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	sort_top_three_desc(t_stack **s)
 		reverse_rotate_b(s);
 	}
 	if ((*s)->value < (*s)->next->value && (*s)->value > (*s)->next->next->value)
-		swap_a(s);
+		swap_b(s);
 }
 
 int is_sorted_order(t_stack **s, int a, int b, int c) {
