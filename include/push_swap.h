@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:05:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 00:08:14 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 03:28:46 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,13 @@ int	swap_a(t_stack **a);
 int	swap_b(t_stack **b);
 int	push_a(t_stack **a, t_stack **b);
 int	push_b(t_stack **a, t_stack **b);
+int	multi_push_a(t_stack **src, t_stack **dst, int count);
 int	rotate_a(t_stack **a);
 int	rotate_b(t_stack **b);
 int	reverse_rotate_a(t_stack **a);
 int	reverse_rotate_b(t_stack **b);
+int multi_revorse_rotate_b(t_stack **s, int count);
+int multi_revorse_rotate_a(t_stack **s, int count);
 
 void	print_command(char *command);
 void	clear_stack(t_stack **stack);
@@ -57,7 +60,6 @@ void		quick_sort(t_stack **stack);
 int			quick_sort_a(t_stack **stack_a, t_stack **stack_b, int size);
 int			quick_sort_b(t_stack **stack_a, t_stack **stack_b, int size);
 void		sort_stack(t_stack **stack_a, t_stack **stack_b);
-
 
 
 #endif

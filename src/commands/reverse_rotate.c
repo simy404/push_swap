@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 12:23:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/04 17:13:13 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 03:28:18 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,25 @@ int	reverse_rotate_b(t_stack **b)
 	if (!reverse_rotate(b))
 		return (0);
 	print_command("rrb");
+	return (1);
+}
+
+int multi_revorse_rotate_b(t_stack **s, int count)
+{
+	while (count--)
+	{
+		if (!reverse_rotate_b(s))
+			return (0);
+	}
+	return (1);
+}
+
+int multi_revorse_rotate_a(t_stack **s, int count)
+{
+	while (count--)
+	{
+		if (!reverse_rotate_a(s))
+			return (0);
+	}
 	return (1);
 }
