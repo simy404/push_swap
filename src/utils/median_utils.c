@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 04:00:41 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 04:08:04 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 07:33:16 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ int get_median(t_stack **stack, int size)
 
 	arr = (int *)malloc(sizeof(int) * size);
 	if (!arr)
-		return (0);
+	{
+		//ft_clear_stacks() //TODO implement this function
+		exit(1);
+	}
 	c = size;
 	tmp = *stack;
 	while(size)

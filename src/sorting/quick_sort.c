@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 23:45:45 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 04:06:06 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 11:44:12 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,8 @@ int quick_sort_b(t_stack **stack_a, t_stack **stack_b, int size)
 			rotate_count++;
 		}
 	}
-	multi_revorse_rotate_b(stack_b, rotate_count);
+	if (stack_size(*stack_b) > size / 2)
+		multi_revorse_rotate_b(stack_b, rotate_count);
 	quick_sort_a(stack_a, stack_b, size / 2 + size % 2);
 	quick_sort_b(stack_a, stack_b, size / 2);
 	return (1);
@@ -93,7 +94,8 @@ int quick_sort_a(t_stack **stack_a, t_stack **stack_b, int size)
 			rotate_count++;
 		}
 	}
-	multi_revorse_rotate_a(stack_a, rotate_count);
+	if (stack_size(*stack_a) > size / 2 + size % 2)
+			multi_revorse_rotate_a(stack_a, rotate_count);
 	quick_sort_a(stack_a, stack_b, size / 2 + size % 2);
 	quick_sort_b(stack_a, stack_b, size / 2);
 	return (1);
