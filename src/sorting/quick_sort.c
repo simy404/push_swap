@@ -6,13 +6,12 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 23:45:45 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 17:02:13 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 18:04:48 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int	handle_less_than_three_b(t_stack **stack_a, t_stack **stack_b, int size)
 {
@@ -55,7 +54,7 @@ int	quick_sort_b(t_stack **stack_a, t_stack **stack_b, int size)
 	rotate_count = 0;
 	if (size <= 3)
 		return (handle_less_than_three_b(stack_a, stack_b, size));
-	pivot = get_median(stack_b, size);
+	pivot = get_median(stack_b, size, stack_a);
 	size_half = size / 2 + size % 2;
 	while (size_half)
 	{
@@ -69,9 +68,8 @@ int	quick_sort_b(t_stack **stack_a, t_stack **stack_b, int size)
 	}
 	if (stack_size(*stack_b) > size / 2)
 		multi_revorse_rotate_b(stack_b, rotate_count);
-	quick_sort_a(stack_a, stack_b, size / 2 + size % 2);
-	quick_sort_b(stack_a, stack_b, size / 2);
-	return (1);
+	return (quick_sort_a(stack_a, stack_b, size / 2 + size % 2)
+		&& quick_sort_b(stack_a, stack_b, size / 2));
 }
 
 int	quick_sort_a(t_stack **stack_a, t_stack **stack_b, int size)
@@ -83,7 +81,7 @@ int	quick_sort_a(t_stack **stack_a, t_stack **stack_b, int size)
 	rotate_count = 0;
 	if (size <= 3)
 		return (handle_less_than_three_a(stack_a, size));
-	pivot = get_median(stack_a, size);
+	pivot = get_median(stack_a, size, stack_b);
 	size_half = size / 2;
 	while (size_half)
 	{
@@ -97,7 +95,6 @@ int	quick_sort_a(t_stack **stack_a, t_stack **stack_b, int size)
 	}
 	if (stack_size(*stack_a) > (size / 2 + size % 2))
 		multi_revorse_rotate_a(stack_a, rotate_count);
-	quick_sort_a(stack_a, stack_b, size / 2 + size % 2);
-	quick_sort_b(stack_a, stack_b, size / 2);
-	return (1);
+	return (quick_sort_a(stack_a, stack_b, size / 2 + size % 2)
+		&& quick_sort_b(stack_a, stack_b, size / 2));
 }

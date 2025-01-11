@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:05:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 16:36:11 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 17:59:34 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int					stack_size(t_stack *stack);
 
 int					is_within_int_range(long number);
 int					is_valid_number(char *str);
-int					get_median(t_stack **stack, int size);
+int					get_median(t_stack **stack, int size, t_stack **sec_stack);
 long				ft_atol(const char *str);
 
 int					stack_contains(t_stack *stack, int value);

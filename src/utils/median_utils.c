@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 04:00:41 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 16:23:27 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 18:00:47 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	sort_array(int *arr, int size)
 	return (1);
 }
 
-int	get_median(t_stack **stack, int size)
+int	get_median(t_stack **stack, int size, t_stack **sec_stack)
 {
 	int		*arr;
 	t_stack	*tmp;
@@ -47,7 +47,9 @@ int	get_median(t_stack **stack, int size)
 	arr = (int *)malloc(sizeof(int) * size);
 	if (!arr)
 	{
-		//ft_clear_stacks() //TODO implement this function
+		clear_stack(sec_stack);
+		clear_stack(stack);
+		print_error("Error");
 		exit(1);
 	}
 	c = size;
