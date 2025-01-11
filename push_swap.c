@@ -6,24 +6,12 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:11:30 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 02:34:41 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 03:58:54 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 #include "libft/libft.h"
-
-#include <stdio.h> //TODO : this library will be deleted after the project is done
-int print_stack(t_stack *stack)
-{
-	while (stack)
-	{
-		printf("%d\n", stack->value);
-		stack = stack->next;
-	}
-	return 0;
-}
-
 
 int main(int argc, char** argv)
 {
@@ -44,9 +32,7 @@ int main(int argc, char** argv)
 		clear_stack(&stack_a);
 		return (0);
 	}
-	// printf("%d\n", stack_size(stack_a));
 	sort_stack(&stack_a, &stack_b);
-	// print_stack(stack_a);
 	clear_stack(&stack_a);
 	return (1);
 }

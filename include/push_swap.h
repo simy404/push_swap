@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:05:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 03:28:46 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 04:05:50 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int		stack_size(t_stack *stack);
 
 int		is_within_int_range(long number);
 int		is_valid_number(char* str);
+int		get_median(t_stack **stack, int size);
 
 int		stack_contains(t_stack *stack, int value);
 int		parse_single_arguments(char* str, t_stack **stack);
@@ -60,6 +61,5 @@ void		quick_sort(t_stack **stack);
 int			quick_sort_a(t_stack **stack_a, t_stack **stack_b, int size);
 int			quick_sort_b(t_stack **stack_a, t_stack **stack_b, int size);
 void		sort_stack(t_stack **stack_a, t_stack **stack_b);
-
 
 #endif
