@@ -6,7 +6,7 @@
 #    By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/30 17:07:47 by hsamir            #+#    #+#              #
-#    Updated: 2025/01/11 04:08:33 by hsamir           ###   ########.fr        #
+#    Updated: 2025/01/11 18:12:07 by hsamir           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,10 @@ src/utils/conversions_utils.c \
 src/utils/median_utils.c \
 src/sorting/sort_three.c \
 src/sorting/quick_sort.c \
-src/sorting/sort_controller.c \
+src/sorting/sort_controller.c
 
-CC = clang
-CFLAGS = -Wall -Wextra -Werror -g
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
 LIBFT = libft/libft.a
 OBJ = $(SRC:.c=.o)
 
