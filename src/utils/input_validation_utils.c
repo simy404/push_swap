@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:28:48 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 00:11:40 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 16:22:14 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 #include "../../libft/libft.h"
 #include <limits.h>
 
-int	is_valid_number(char* str) //TODO check str length and then check if the number is valid
+int	is_valid_number(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
-	if(!str[i])
+	if (!str[i])
 		return (0);
 	while (str[i])
 	{

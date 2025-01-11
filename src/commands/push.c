@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 12:23:40 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 02:24:19 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 17:20:44 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,12 @@ int	push_b(t_stack **a, t_stack **b)
 	return (1);
 }
 
-int multi_push_a(t_stack **src, t_stack **dst, int count)
+int	multi_push_a(t_stack **src, t_stack **dst, int count)
 {
 	while (count--)
-		push_a(src, dst);
+	{
+		if (!push_a(src, dst))
 			return (0);
+	}
 	return (1);
 }

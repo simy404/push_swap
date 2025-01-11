@@ -6,18 +6,18 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 04:00:41 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 07:33:16 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 16:23:27 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 #include <stdlib.h>
 
-int sort_array(int *arr, int size)
+int	sort_array(int *arr, int size)
 {
-	int i;
-	int j;
-	int tmp;
+	int	i;
+	int	j;
+	int	tmp;
 
 	i = 0;
 	while (i < size)
@@ -37,11 +37,12 @@ int sort_array(int *arr, int size)
 	}
 	return (1);
 }
-int get_median(t_stack **stack, int size)
+
+int	get_median(t_stack **stack, int size)
 {
-	int *arr;
-	t_stack *tmp;
-	int c;
+	int		*arr;
+	t_stack	*tmp;
+	int		c;
 
 	arr = (int *)malloc(sizeof(int) * size);
 	if (!arr)
@@ -51,7 +52,7 @@ int get_median(t_stack **stack, int size)
 	}
 	c = size;
 	tmp = *stack;
-	while(size)
+	while (size)
 	{
 		arr[--size] = tmp->value;
 		tmp = tmp->next;

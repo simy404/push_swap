@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 21:25:59 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 01:25:55 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 16:42:05 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "../../libft/libft.h"
 #include <stdlib.h>
 
-void free_split(char **split)
+void	free_split(char **split)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (split[i])
@@ -24,28 +24,22 @@ void free_split(char **split)
 	free(split);
 }
 
-int push_if_valid(char* str, t_stack **stack)
+int	push_if_valid(char *str, t_stack **stack)
 {
-	long number;
+	long	number;
 
 	if (!is_valid_number(str))
-	{
-		ft_putendl_fd("Error", 2);
 		return (0);
-	}
 	number = ft_atol(str);
 	if (!is_within_int_range(number) || stack_contains(*stack, number))
-	{
-		ft_putendl_fd("Error", 2);
 		return (0);
-	}
 	return (push_to_stack(stack, number));
 }
 
-int	parse_single_arguments(char* str, t_stack **stack)
+int	parse_single_arguments(char *str, t_stack **stack)
 {
-	char **numbers;
-	int i;
+	char	**numbers;
+	int		i;
 
 	i = 0;
 	numbers = ft_split(str, ' ');
@@ -77,5 +71,3 @@ int	parse_multiple_arguments(int argc, char **argv, t_stack **stack)
 	}
 	return (1);
 }
-
-

@@ -6,21 +6,22 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 22:18:22 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 04:25:51 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/11 16:58:46 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-int is_sorted_order(t_stack **s, int a, int b, int c) {
-	int da;
-	int db;
-	int dc;
+int	is_sorted_order(t_stack **s, int a, int b, int c)
+{
+	int	da;
+	int	db;
+	int	dc;
 
 	da = (*s)->value;
 	db = (*s)->next->value;
 	dc = (*s)->next->next->value;
-	return !(da > db ^ a > b) && !(dc > db ^ c > b) && !(da > dc ^ a > c);
+	return (!(da > db ^ a > b) && !(dc > db ^ c > b) && !(da > dc ^ a > c));
 }
 
 void	sort_top_three_asc(t_stack **s)
