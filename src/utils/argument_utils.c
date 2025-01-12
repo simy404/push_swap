@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 21:25:59 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/12 11:14:29 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/12 12:35:01 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	parse_single_arguments(char *str, t_stack **stack)
 	char	**numbers;
 	int		i;
 
+	if (!ft_strlen(str))
+		return (0);
 	i = 0;
 	numbers = ft_split(str, ' ');
 	if (!numbers)
