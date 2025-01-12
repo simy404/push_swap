@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*   By: hsamir <hsamir@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:11:30 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 16:26:45 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/12 10:36:27 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 	if (is_valid)
 		sort_stack(&stack_a, &stack_b);
 	else
-		print_error("Error\n");
+		print_error("Error");
 	clear_stack(&stack_a);
 	clear_stack(&stack_b);
 	return (1);
