@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsamir <hsamir@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 17:05:36 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/12 11:12:48 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/14 00:08:30 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int					is_stack_sorted(t_stack *stack, t_flag flag);
 int					stack_size(t_stack *stack);
 
 int					is_within_int_range(long number);
+int					is_all_white_space(char *str);
 int					is_valid_number(char *str);
 int					get_median(t_stack **stack, int size, t_stack **sec_stack);
 long				ft_atol(const char *str, int *error);

@@ -6,7 +6,7 @@
 /*   By: hsamir <hsamir@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 17:28:48 by hsamir            #+#    #+#             */
-/*   Updated: 2025/01/11 16:22:14 by hsamir           ###   ########.fr       */
+/*   Updated: 2025/01/14 00:07:53 by hsamir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,18 @@ int	stack_contains(t_stack *stack, int value)
 int	is_within_int_range(long number)
 {
 	return (number >= INT_MIN && number <= INT_MAX);
+}
+
+int	is_all_white_space(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
+			return (0);
+		str++;
+	}
+	return (1);
 }
